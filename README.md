@@ -1,13 +1,13 @@
 # ptp2021-8-tabletop-game
 ### <u>**Состав команды**</u>
-- Панов Севастьян(капитан) - nOmeep
-- Баев Данил - Pur3Vessel
-- Матвеев Евгений - theElusiveJoe
-- Федоров Александр - JazZzik
-- Куценков Максим - megamax625
-- Петросян Алексей - AlexPetrosyan
-- Шишкин Иван - 	ivanfotbin
-- Проскурников Юрий - Qmask26
+- Панов Севастьян(капитан) - <a href=https://github.com/nOmeep>nOmeep</a>
+- Баев Данил - <a href=https://github.com/Pur3Vessel>Pur3Vessel</a>
+- Матвеев Евгений - <a href=https://github.com/theElusiveJoe>theElusiveJoe</a>
+- Федоров Александр - <a href=https://github.com/JazZzik>JazZzik</a>
+- Куценков Максим - <a href=https://github.com/megamax625>megamax625</a>
+- Петросян Алексей - <a href=https://github.com/AlexPetrosyan>AlexPetrosyan</a>
+- Шишкин Иван - <a href=https://github.com/ivanfotbin>ivanfotbin</a>
+- Проскурников Юрий - <a href=https://github.com/Qmask26>Qmask26</a>
 
 ### <u>**Описание игры**</u>
 
