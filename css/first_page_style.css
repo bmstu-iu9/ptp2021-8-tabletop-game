@@ -1,0 +1,105 @@
+body {
+    background-color: #dff3ef;
+    user-select: none; /* чтоб юзер не мог выделять */
+    margin: center;
+}
+
+/*
+    Header
+*/
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 1000; /* позиция на экране */
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/*
+    Container
+*/
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*
+    MainPhrase
+*/
+
+.mainPhrase { /* "Выбор команды" или что-то в этом роде */
+    font-size: 30px;
+    text-transform: uppercase; /* фраза запишется в верхнем регистре */
+    
+    font-family: "Comic Sans MS", "Comic Sans";
+
+    margin-top: 3%;
+    text-align: center;
+    color: black;
+}
+
+/*
+    Выбор команды
+*/
+
+.teams { /* для кнопок команды */
+    text-transform: uppercase; /* фраза запишется в верхнем регистре */
+    font-size: 40px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.team_one {
+    display: inline-block; /* чтобы шли дивы в одну линию */
+    margin-right: 10%;
+
+    /* что-то типо овальчика */
+    justify-content: center;
+    background-color: rgb(124, 195, 212);
+    padding: 5%; /* радиус овальчика */
+    border-radius: 100%; /* овалистость, чем меньше значение - тем больше скругление */
+}
+
+.team_two { 
+    display: inline-block; /* чтобы шли дивы в одну линию */
+    margin-left: 10%;
+
+    /* что-то типо овальчика */
+    justify-content: center;
+    background-color: rgb(238, 142, 64);
+    padding: 5%; /* радиус овальчика */
+    border-radius: 100%; /* овалистость, чем меньше значение - тем больше скругление */
+}
+
+.team_link_one {
+    font-family: Impact, fantasy;
+
+    color: black;
+    vertical-align: top;
+    text-decoration: none; /* подчеркивание ссылки */
+
+    transition: all .2s linear; /* для плавности смены цвета шрифта */
+}
+
+.team_link_two {
+    font-family: Impact, fantasy;
+
+    vertical-align: top;
+    color: black;
+    text-decoration: none;
+
+    transition: all .2s linear; /* для плавности смены цвета шрифта */
+}
+
+.team_link_one:hover { /* после наведения на надпись */
+    color: blue; /* смена цвета после навеедения на команду 1 */
+    text-decoration: underline; /* подчеркивание текста */
+}
+
+
+.team_link_two:hover { /* после наведения на надпись */
+    color: red; /* смена цвета после навеедения на команду 2 */
+    text-decoration: underline; /* подчеркивание текста */
+}
