@@ -11,24 +11,28 @@
 <body>
     <header class="header">
         <div class="container">
+            <!-- Фраза сверху страницы, указание -->
             <div class="mainPhrase">
                 выбор команды
             </div>
-
+            <!-- Команды -->
             <nav class="teams">
-                <div class="team_one">
-                    <a class="team_link_one" href="#">
-                        Голубые
-                    </a>
-                </div>
-                <div class="team_two">
-                    <a class="team_link_two" href="#">
-                        Красные
-                    </a> 
-                </div>
+                <a class="team_one" href="#">
+                    <!-- Ссылка будет переводить за левых -->
+                    Голубые    
+                </a>
+                <a class="team_two" href="#">
+                    <!-- Ссылка будет переводить игру за правых -->
+                    Красные
+                </a>
             </nav>
-
         </div>
+
+        <form class="fill_gap">
+            <input class="first_player" maxlength="25" placeholder="Введите имя">
+            <input class="second_player" maxlength="25" placeholder="Введите имя">
+        </form>
+        <!-- 2 поля с вводимыми именами -->
     </header>
 
     <div class="themes">

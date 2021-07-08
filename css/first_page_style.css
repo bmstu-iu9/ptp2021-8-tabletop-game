@@ -52,8 +52,18 @@ body {
 }
 
 .team_one {
+    font-family: Impact, fantasy;
+
+    color: black;
+    vertical-align: top;
+    text-decoration: none; /* подчеркивание ссылки */
+
+    transition: underline .2s linear; /* для плавности смены цвета шрифта */
+    transition: color .2s linear;
+
     display: inline-block; /* чтобы шли дивы в одну линию */
-    margin-right: 10%;
+    margin-right: 5%;
+    text-decoration: none;
 
     /* что-то типо овальчика */
     justify-content: center;
@@ -62,9 +72,24 @@ body {
     border-radius: 100%; /* овалистость, чем меньше значение - тем больше скругление */
 }
 
+.team_one:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
 .team_two { 
+    font-family: Impact, fantasy;
+
+    vertical-align: top;
+    color: black;
+    text-decoration: none;
+
+    transition: underline .2s linear; /* для плавности смены цвета шрифта */
+    transition: color .2s linear;
+
     display: inline-block; /* чтобы шли дивы в одну линию */
-    margin-left: 10%;
+    margin-left: 5%;
+    text-decoration: none;
 
     /* что-то типо овальчика */
     justify-content: center;
@@ -73,33 +98,41 @@ body {
     border-radius: 100%; /* овалистость, чем меньше значение - тем больше скругление */
 }
 
-.team_link_one {
-    font-family: Impact, fantasy;
-
-    color: black;
-    vertical-align: top;
-    text-decoration: none; /* подчеркивание ссылки */
-
-    transition: all .2s linear; /* для плавности смены цвета шрифта */
+.team_two:hover {
+    text-decoration: underline;
+    color: red;
 }
 
-.team_link_two {
-    font-family: Impact, fantasy;
+/*
+    Формы, куда вписываются ники или что-нибудь еще :)
+    их желательно поправить, чет не получилось нормально их поместить)
+    при жмыхе экрана чет криво ставится
+*/
 
-    vertical-align: top;
-    color: black;
-    text-decoration: none;
-
-    transition: all .2s linear; /* для плавности смены цвета шрифта */
+.fill_gap {
+    font-size: 30px;
+    margin-top: 10px;
 }
 
-.team_link_one:hover { /* после наведения на надпись */
-    color: blue; /* смена цвета после навеедения на команду 1 */
-    text-decoration: underline; /* подчеркивание текста */
+.first_player {
+    font-size: 25px; /* размер шрифта внутри поля */
+    text-align: center;
+
+    margin-left: 30%;
+    
+    width: 15%;
+    margin-right: 5%;
+    background-color: #fff; /* цвет выберите понравившийся :) */
+    border-radius: 5%;
 }
 
+.second_player {
+    font-size: 25px; /* размер шрифта внутри поля */
+    text-align: center;
 
-.team_link_two:hover { /* после наведения на надпись */
-    color: red; /* смена цвета после навеедения на команду 2 */
-    text-decoration: underline; /* подчеркивание текста */
+    width: 15%;
+    margin-left: 5%;
+    background-color: #fff; /* цвет выберите понравившийся :) */
+    border-radius: 5%;
 }
+
