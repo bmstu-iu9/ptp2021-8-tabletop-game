@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+     <!-- Custom css -->
+     <link href="../css/battleground.css" rel="stylesheet"/>
+    <title>battleground</title>
+
+  </head>
+  <body>
+
+     <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!--Правила перекочевали из index.html-->
+
+    <button type="button" class="btn btn-dark position-absolute top-0 end-0" data-bs-toggle="modal" data-bs-target="#rules">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+          <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+        </svg>
+      </button>
+      <div class="modal fade" id="rules" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-tite" id="exampleModalLabel">
+              Rules!</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <ol type="1">
+                  <li>Два игрока подключаются на сайт и начинают свое пошаговое состязание, длящееся не более 10 минут. У каждого игрока есть 3 главных поля, которые нужно захватить сопернику, остальные поля изначально нейтральные.</li>
+                  <li>Чтобы захватить какую-то конкретную зону, игроку необходимо правильно ответить на вопрос выбранного поля(вопросы на полях выбираются исходя из выбранных заранее категорий, выбираемых игроками) за определенный промежуток времени. Если игрок дал верный ответ, тогда он получает +очки, а поле переходит в его распоряжение и он может выбрать категорию, которую придется отвечать сопернику, если тот попытается перехватить эту зону в дальнейшем. За перехват зоны игрок получает количество очков, равное: стандарная сумма + ставка игрока * 2</li>
+                  <li>Когда же игрок достигает главных клеток соперника, начинается дуэль:
+                     <ol type="i">
+                        <li>Игрокам предстоит отвечать на вопросы пока дуэль не закончится, либо пока нападающий не наберет 3 очка-дуэли.</li>
+                        <li>В течение 10 секунд, дающихся на размышление, игрокам необходимо выбрать правильный вариант ответа. Если нападавший ответил верно, а защищавшийся нет, тогда нападавшему достается одно очко-дуэль. Если защищавшийся ответил верно, а нападавший нет, тогда дуэль завершается победой защитника, и он получает стандарное число очков. Если оба участника ответили неверно, клетка остается у защищавшегося, но он теряет стандартное число очков(количесво очков не может быть отрицательным). Если же оба ответили правильно, тогда дуэль продолжается.</li>
+                        <li>Такая зона после захвата переходит в распоряжение игрока, захватившего ее, но в случае перехвата она не станет снова главной клеткой соперника.</l>
+                     </ol>
+                  </li>
+                  <li>Побеждает тот, кто захватил больше главных клеток соперника. Если оба игрока имеют одинаковое число таких захваченых клеток, тогда победа уходит тому, кто набрал больше очков по итогам игры. Иначе ничья.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-8">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi expedita beatae numquam nemo aperiam vero voluptate illo rerum quaerat eveniet illum, laudantium, porro accusamus culpa neque labore sit cumque incidunt.
+            </div>
+            <div class="col-4">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 p-3">
+                        <div class="text-primary text-center fw-bold fs-4">
+                            Короны
+                        </div>
+                        <div class="row p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-app" viewBox="0 0 16 16">
+                                <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+                              </svg>
+                        </div>
+                        <div class="row">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-app" viewBox="0 0 16 16">
+                                <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+                              </svg>
+                        </div>
+                        <div class="row">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-app" viewBox="0 0 16 16">
+                                <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-5 col-sm-6 p-3">
+                        <div class="text-primary text-center fw-bold fs-4">
+                            Очки
+                        </div>
+                        <div class="text-primary text-center fw-bold fs-4">
+                            0
+                        </div>
+                    </div>   
+                </div>
+                <div class="row p-5">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <p class="text-dark fs-3 text-center">
+                            Ход <span class="text-danger"> красного игрока </span>
+                        </p>
+                        <div class="row p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                                <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                                <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center p-4">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 p-3">
+                        <div class="text-danger fw-bold text-center fs-4">
+                            Короны
+                        </div>
+                        <div class="row p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-app" viewBox="0 0 16 16">
+                                <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+                              </svg>
+                        </div>
+                        <div class="row">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-app" viewBox="0 0 16 16">
+                                <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+                              </svg>
+                        </div>
+                        <div class="row">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-app" viewBox="0 0 16 16">
+                                <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-7 p-3">
+                        <div class="text-danger text-center fw-bold fs-4">
+                            Очки
+                        </div>
+                        <div class="text-danger text-center fw-bold fs-4">
+                            0
+                        </div>
+                    </div>   
+                </div>
+            </div> 
+
+        </div>
+      </div>
+       <!-- Это немного, но это честная работа. Настоятельно прошу Александра Федорова не бить меня ногами (что ты мне сделаешь я в другом городе) -->
+       <!-- Пишу на этой штуке первый день, еще не до конца понимаю как тут сделана работа с масштабированием, поэтому все поджмыхнуто, но в принципе половину экрана сделал -->
+       <!-- С масштабами разберусь, когда пойму, как все это работает :)-->
+       <!-- Основные на данный момент проблемы - это то, что красные поля сходятся быстрей, и на самом маленьком окошке умешьнается иконка таймера-->
+  </body>
+</html>
