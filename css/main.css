@@ -1,3 +1,16 @@
 body {
-  background-color: #212529;
+  background-color: #33449C;
+}
+
+.btn-main{
+  background-color: #FD6592 !important;
+}
+
+.btn-corner{
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.icon-main{
+  width: 256;
+  height: 256;
 }
