@@ -6,9 +6,64 @@ body {
 
 :root{  
     --hex-side: 60px;
+    --retreat-height: 53px;
     --hex-rotate: 30deg; /* угол наклона шестиугольника относительно центра */
+    --first-top: 46%;
+    --second-top: 19%;
+    --third-top: 10%;
+    --first-left: 130%;
+    --second-left: 64%;
+    --third-left: 0;
+}
+@media (max-width: 1340px) {
+    :root {
+        --hex-side: 55px;
+    }
+}
+@media (max-width: 1200px) {
+    :root {
+        --hex-side: 50px;
+        --retreat-height: 48px;
+    }
 }
 
+@media (max-width: 1030px) {
+    :root {
+        --hex-side: 45px;
+        --retreat-height: 40px;
+    }
+}
+@media (max-width: 950px) {
+    :root {
+        --hex-side: 40px;
+        --retreat-height: 40px;
+        --first-top: 57%;
+        --second-top: 30%;
+        --third-top: 20%;
+    }
+}
+@media (max-width: 870px) {
+    :root {
+        --hex-side: 35px;
+        --retreat-height: 30px;
+        --first-top: 64%;
+        --second-top: 37%;
+        --third-top: 27%;
+    }
+}
+@media (max-width: 800px) {
+    :root {
+        --hex-side: 31px;
+        --retreat-height: 30px;
+    }
+}
+@media (max-width: 575px) {
+    :root {
+        --hex-side: 25px;
+        --retreat-height: 25px;
+    
+    }
+}
 .hexagon {
     width: calc(var(--hex-side) * 1.732);
     height: var(--hex-side);
@@ -37,8 +92,15 @@ body {
 .hexagon:after {
     transform: rotate(-60deg);
 }
-
-
+.hexagon:hover {
+    background: radial-gradient(circle, #87e0fd 0%,#01262b 55%);
+}
+.hexagon:hover:before {
+    background: radial-gradient(circle, #87e0fd 0%,#01262b 55%);
+}
+.hexagon:hover:after {
+    background: radial-gradient(circle, #87e0fd 0%,#01262b 55%);
+}
 .hexagon-blue {
     width: calc(var(--hex-side) * 1.732);
     height: var(--hex-side);
@@ -66,6 +128,15 @@ body {
 
 .hexagon-blue:after {
     transform: rotate(-60deg);
+}
+.hexagon-blue:hover {
+    background: radial-gradient(circle, #87e0fd 0%,#1a0338 55%);
+}
+.hexagon-blue:hover:before {
+    background: radial-gradient(circle, #87e0fd 0%,#1a0338 55%);
+}
+.hexagon-blue:hover:after {
+    background: radial-gradient(circle, #87e0fd 0%,#1a0338 55%);
 }
 .hexagon-red {
     width: calc(var(--hex-side) * 1.732);
@@ -95,10 +166,20 @@ body {
 .hexagon-red:after {
     transform: rotate(-60deg);
 }
+
+.hexagon-red:hover {
+    background: radial-gradient(circle, #87e0fd, #360000 55%);
+}
+.hexagon-red:hover:before {
+    background: radial-gradient(circle, #87e0fd 0%,#360000 55%);
+}
+.hexagon-red:hover:after {
+    background: radial-gradient(circle, #87e0fd 0%,#360000 55%);
+}
 .retreat {
     background-color: transparent;
     width: 1px;
-    height: 50px;
+    height: var(--retreat-height);
 }
 
 .hexagon-empty {
@@ -132,28 +213,28 @@ body {
 .first-col-move {
     position: relative;
     left: 130%;
-    top: 46%;
+    top: var(--first-top);
 }
 .second-col-move {
     position: relative;
     left: 64%;
-    top: 19%;
+    top: var(--second-top);
 }
 .third-col-move {
     position: relative;
     left: 0;
-    top: 10%;
+    top: var(--third-top);
 }
 .fourth-col-move {
     position: relative;
     left: -64%;
-    top: 19%;
+    top: var(--second-top);
 }
 
 .fifth-col-move {
     position: relative;
     left: -130%;
-    top: 46%;
+    top:  var(--first-top);
 }
 .timer-move {
     position: absolute;
@@ -166,9 +247,3 @@ body {
     top: 210px;
 }
 
-/*
-    В общем, вариант поля пока не адаптивный, так как при использовании относительных размеров (в т.ч штук bootstrap'а),
-    все найденные мной варианты шестиугольников (взял самый удобный) начинает превращать в Патрика из Губки Боба. Куча времени ушло на то,
-    чтоб понять что с этим борьбы нет, поэтому мне предстоит плавная и выверенная работа с медиа-запросами.
-    Очков пока нет, таймер и надпись just for fun. В принципе я уже на пути:)
-*/
