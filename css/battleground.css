@@ -2,4 +2,173 @@ body {
     background-color: #e5e5e5;
      /* мне приятней работать с этим цветом бэкграунда */
   }
- 
+
+
+:root{  
+    --hex-side: 60px;
+    --hex-rotate: 30deg; /* угол наклона шестиугольника относительно центра */
+}
+
+.hexagon {
+    width: calc(var(--hex-side) * 1.732);
+    height: var(--hex-side);
+    background: #339999;
+    position: relative;
+    transform: rotate(var(--hex-rotate));
+    top: 0%;
+    left: 0;
+}
+
+.hexagon:before, 
+.hexagon:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #339999;
+    top: 0;
+    left: 0;
+}
+
+.hexagon:before {
+    transform: rotate(60deg);
+}
+
+.hexagon:after {
+    transform: rotate(-60deg);
+}
+
+
+.hexagon-blue {
+    width: calc(var(--hex-side) * 1.732);
+    height: var(--hex-side);
+    background: #000066;
+    position: relative;
+    transform: rotate(var(--hex-rotate));
+    top: 0%;
+    left: 0;
+}
+
+.hexagon-blue:before, 
+.hexagon-blue:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000066;
+    top: 0;
+    left: 0;
+}
+
+.hexagon-blue:before {
+    transform: rotate(60deg);
+}
+
+.hexagon-blue:after {
+    transform: rotate(-60deg);
+}
+.hexagon-red {
+    width: calc(var(--hex-side) * 1.732);
+    height: var(--hex-side);
+    background: #CC0000;
+    position: relative;
+    transform: rotate(var(--hex-rotate));
+    top: 0%;
+    left: 0;
+}
+
+.hexagon-red:before, 
+.hexagon-red:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #CC0000;
+    top: 0;
+    left: 0;
+}
+
+.hexagon-red:before {
+    transform: rotate(60deg);
+}
+
+.hexagon-red:after {
+    transform: rotate(-60deg);
+}
+.retreat {
+    background-color: transparent;
+    width: 1px;
+    height: 50px;
+}
+
+.hexagon-empty {
+    width: calc(var(--hex-side) * 1.732);
+    height: var(--hex-side);
+    background-color: transparent;
+    position: relative;
+    transform: rotate(var(--hex-rotate));
+    top: 0;
+    left: 0;
+}
+
+.hexagon-empty:before, 
+.hexagon-empty:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+}
+
+.hexagon-empty:before {
+    transform: rotate(60deg);
+}
+
+.hexagon-empty:after {
+    transform: rotate(-60deg);
+}
+.first-col-move {
+    position: relative;
+    left: 130%;
+    top: 46%;
+}
+.second-col-move {
+    position: relative;
+    left: 64%;
+    top: 19%;
+}
+.third-col-move {
+    position: relative;
+    left: 0;
+    top: 10%;
+}
+.fourth-col-move {
+    position: relative;
+    left: -64%;
+    top: 19%;
+}
+
+.fifth-col-move {
+    position: relative;
+    left: -130%;
+    top: 46%;
+}
+.timer-move {
+    position: absolute;
+    right: 12%;
+    top: 40% 
+}
+.text-move {
+    position: relative;
+    right: 38%;
+    top: 210px;
+}
+
+/*
+    В общем, вариант поля пока не адаптивный, так как при использовании относительных размеров (в т.ч штук bootstrap'а),
+    все найденные мной варианты шестиугольников (взял самый удобный) начинает превращать в Патрика из Губки Боба. Куча времени ушло на то,
+    чтоб понять что с этим борьбы нет, поэтому мне предстоит плавная и выверенная работа с медиа-запросами.
+    Очков пока нет, таймер и надпись just for fun. В принципе я уже на пути:)
+*/
