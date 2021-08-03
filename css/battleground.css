@@ -14,16 +14,27 @@ body {
     --first-left: 130%;
     --second-left: 64%;
     --third-left: 0;
+    --fourth-left: -64%;
+    --fifth-left: -130%;
+    --scope-size: 20px;
+    --blue-scope-left: -360px;
+    --blue-scope-top: 60px;
+    --red-scope-left: -360px;
+    --red-scope-top: 500px;
 }
 @media (max-width: 1340px) {
     :root {
         --hex-side: 55px;
+        --blue-scope-left: -300px;
+        --red-scope-left: -300px;
     }
 }
 @media (max-width: 1200px) {
     :root {
         --hex-side: 50px;
         --retreat-height: 48px;
+        --blue-scope-left: -250px;
+        --red-scope-left: -250px;
     }
 }
 
@@ -31,10 +42,14 @@ body {
     :root {
         --hex-side: 45px;
         --retreat-height: 40px;
+        --blue-scope-left: -200px;
+        --red-scope-left: -200px;
     }
 }
 @media (max-width: 950px) {
     :root {
+        --blue-scope-left: -150px;
+        --red-scope-left: -150px;
         --hex-side: 40px;
         --retreat-height: 40px;
         --first-top: 57%;
@@ -44,6 +59,8 @@ body {
 }
 @media (max-width: 870px) {
     :root {
+        --blue-scope-left: -100px;
+        --red-scope-left: -100px;
         --hex-side: 35px;
         --retreat-height: 30px;
         --first-top: 64%;
@@ -53,15 +70,27 @@ body {
 }
 @media (max-width: 800px) {
     :root {
+        --blue-scope-left: -50px;
+        --red-scope-left: -50px;
         --hex-side: 31px;
         --retreat-height: 30px;
     }
 }
 @media (max-width: 575px) {
     :root {
+        --first-top: 300px;
+        --second-top: 225px;
+        --third-top: 200px;
+        --first-left: 110px;
+        --second-left: 75px;
+        --third-left: 40px;
+        --fourth-left: 5px;
+        --fifth-left: -30px;
         --hex-side: 25px;
         --retreat-height: 25px;
-    
+        --scope-size: 18px;
+        --blue-scope-left: -190px;
+        --red-scope-left: -190px;
     }
 }
 .hexagon {
@@ -212,28 +241,28 @@ body {
 }
 .first-col-move {
     position: relative;
-    left: 130%;
+    left: var(--first-left);
     top: var(--first-top);
 }
 .second-col-move {
     position: relative;
-    left: 64%;
+    left: var(--second-left);
     top: var(--second-top);
 }
 .third-col-move {
     position: relative;
-    left: 0;
+    left: var(--third-left);
     top: var(--third-top);
 }
 .fourth-col-move {
     position: relative;
-    left: -64%;
+    left: var(--fourth-left);
     top: var(--second-top);
 }
 
 .fifth-col-move {
     position: relative;
-    left: -130%;
+    left: var(--fifth-left);
     top:  var(--first-top);
 }
 .timer-move {
@@ -246,4 +275,37 @@ body {
     right: 38%;
     top: 210px;
 }
-
+.blue-scope {
+    color: black;
+    font-size: var(--scope-size);
+    position: relative;
+    left: var(--blue-scope-left);
+    top: var(--blue-scope-top);
+}
+.new-blue-scope {
+    color: blue;
+    font-weight: bold;
+    font-size: var(--scope-size);
+    position: relative;
+    left: var(--blue-scope-left);
+    top: var(--blue-scope-top);
+}
+.red-scope {
+    color: black;
+    font-size: var(--scope-size);
+    position: relative;
+    left: var(--red-scope-left);
+    top: var(--red-scope-top);
+}
+.new-red-scope {
+    color: red;
+    font-weight: bold;
+    font-size: var(--scope-size);
+    position: relative;
+    left: var(--red-scope-left);
+    top: var(--red-scope-top);
+}
+/*
+    В общем я сделал два счетчика очков с простеньким скриптом, который ежесекундно обновляет их (просто так :), контролируемые обновления оч просто будет сделать потом).
+    Все возможные кривости я буду полировать когда поле боя обретет все что ему необходимо (как минимум таймер еще)
+*/
