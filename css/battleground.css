@@ -21,12 +21,16 @@ body {
     --blue-scope-top: 60px;
     --red-scope-left: -360px;
     --red-scope-top: 500px;
+    --timer-size: 25px;
+    --timer-top: 300px;
+    --timer-left: 1110px;
 }
 @media (max-width: 1340px) {
     :root {
         --hex-side: 55px;
         --blue-scope-left: -300px;
         --red-scope-left: -300px;
+        --timer-left: 900px;
     }
 }
 @media (max-width: 1200px) {
@@ -35,6 +39,7 @@ body {
         --retreat-height: 48px;
         --blue-scope-left: -250px;
         --red-scope-left: -250px;
+        --timer-left: 800px;
     }
 }
 
@@ -44,6 +49,7 @@ body {
         --retreat-height: 40px;
         --blue-scope-left: -200px;
         --red-scope-left: -200px;
+        --timer-left: 700px;
     }
 }
 @media (max-width: 950px) {
@@ -55,6 +61,7 @@ body {
         --first-top: 57%;
         --second-top: 30%;
         --third-top: 20%;
+        --timer-left: 650px;
     }
 }
 @media (max-width: 870px) {
@@ -66,6 +73,7 @@ body {
         --first-top: 64%;
         --second-top: 37%;
         --third-top: 27%;
+        --timer-left: 600px;
     }
 }
 @media (max-width: 800px) {
@@ -74,6 +82,7 @@ body {
         --red-scope-left: -50px;
         --hex-side: 31px;
         --retreat-height: 30px;
+        --timer-left: 550px;
     }
 }
 @media (max-width: 575px) {
@@ -91,6 +100,8 @@ body {
         --scope-size: 18px;
         --blue-scope-left: -190px;
         --red-scope-left: -190px;
+        --timer-left: 200px;
+        --timer-top: 650px;
     }
 }
 .hexagon {
@@ -305,7 +316,11 @@ body {
     left: var(--red-scope-left);
     top: var(--red-scope-top);
 }
-/*
-    В общем я сделал два счетчика очков с простеньким скриптом, который ежесекундно обновляет их (просто так :), контролируемые обновления оч просто будет сделать потом).
-    Все возможные кривости я буду полировать когда поле боя обретет все что ему необходимо (как минимум таймер еще)
-*/
+.timer {
+    font-weight: bold;
+    font-size: var(--timer-size);
+    position: absolute;
+    left: var(--timer-left);
+    top: var(--timer-top);
+}
+
