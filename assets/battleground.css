@@ -110,7 +110,7 @@ body {
     background: #339999;
     position: relative;
     transform: rotate(var(--hex-rotate));
-    top: 0%;
+    top: 0;
     left: 0;
 }
 
@@ -147,7 +147,7 @@ body {
     background: #000066;
     position: relative;
     transform: rotate(var(--hex-rotate));
-    top: 0%;
+    top: 0;
     left: 0;
 }
 
@@ -184,7 +184,7 @@ body {
     background: #CC0000;
     position: relative;
     transform: rotate(var(--hex-rotate));
-    top: 0%;
+    top: 0;
     left: 0;
 }
 
