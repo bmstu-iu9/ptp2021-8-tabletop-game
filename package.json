@@ -1,15 +1,21 @@
 {
-  "name": "ptp",
+  "name": "testPtp",
   "version": "1.0.0",
-  "description": "",
+  "description": "- Панов Севастьян(капитан) - <a href=https://github.com/nOmeep>nOmeep</a> - Баев Данил - <a href=https://github.com/Pur3Vessel>Pur3Vessel</a> - Матвеев Евгений - <a href=https://github.com/theElusiveJoe>theElusiveJoe</a> - Федоров Александр - <a href=https://github.com/JazZzik>JazZzik</a> - Куценков Максим - <a href=https://github.com/megamax625>megamax625</a> - Петросян Алексей - <a href=https://github.com/AlexPetrosyan>AlexPetrosyan</a> - Шишкин Иван - <a href=https://github.com/ivanfotbin>ivanfotbin</a> - Проскурников Юрий - <a href=https://github.com/Qmask26>Qmask26</a>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Server/server.js",
+    "devStart": "nodemon Server/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "socket.io": "^4.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
