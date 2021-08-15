@@ -5,9 +5,9 @@
  */
 
 // для примера, по итогу это должно всё заполняться в начале игры на основе того, что выбрали игроки
-preferencesRed = ["Science"];
-preferencesBlue = ["PopCulture"];
-categories = ["Science", "PopCulture", "Sports"];
+let preferencesRed = ["Science"];
+let preferencesBlue = ["PopCulture"];
+let categories = ["Science", "PopCulture", "Sports"];
 
 let questionBank = [];
 let id = -1; // на всякий случай
