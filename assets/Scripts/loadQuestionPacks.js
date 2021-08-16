@@ -5,9 +5,15 @@
  */
 
 // для примера, по итогу это должно всё заполняться в начале игры на основе того, что выбрали игроки
-let preferencesRed = ["Science"];
-let preferencesBlue = ["PopCulture"];
+let preferencesRed = ["Science", "Sports"];
+let preferencesBlue = ["PopCulture", "Sports"];
 let categories = ["Science", "PopCulture", "Sports"];
+
+// activeCategories - все загруженные по итогу категории (уникальное объединение preferencesRed и preferencesBlue
+let activeCategories = new Set([
+    ...preferencesRed,
+    ...preferencesBlue
+]);
 
 let questionBank = [];
 let id = -1; // на всякий случай
@@ -41,7 +47,10 @@ function getQuestionPack(catName) {
         id++;
         questionPack.push(getQuestion(questions[i]));
     }
-    return questionPack;
+    return {
+        catName,
+        questionPack
+    };
 }
 
 function getQuestion(question) {
