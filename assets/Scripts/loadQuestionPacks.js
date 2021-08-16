@@ -5,8 +5,8 @@
  */
 
 // для примера, по итогу это должно всё заполняться в начале игры на основе того, что выбрали игроки
-let preferencesRed = ["Science"];
-let preferencesBlue = ["PopCulture"];
+let preferencesRed = ["Science", "Sports"];
+let preferencesBlue = ["PopCulture", "Sports"];
 let categories = ["Science", "PopCulture", "Sports"];
 
 // activeCategories - все загруженные по итогу категории (уникальное объединение preferencesRed и preferencesBlue
