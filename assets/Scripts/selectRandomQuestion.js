@@ -21,7 +21,7 @@ function selectRandomQuestion(mode, defenceCategory = "any") {
             takeQuestion(preferencesBlue[Math.floor(Math.random()*preferencesBlue.length)], "blue");
         }
     } else {
-        takeQuestion(defenceCategory);
+        takeQuestion(defenceCategory, mode);
     }
 }
 
