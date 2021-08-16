@@ -41,7 +41,10 @@ function getQuestionPack(catName) {
         id++;
         questionPack.push(getQuestion(questions[i]));
     }
-    return questionPack;
+    return {
+        catName,
+        questionPack
+    };
 }
 
 function getQuestion(question) {
