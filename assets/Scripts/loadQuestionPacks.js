@@ -9,6 +9,12 @@ let preferencesRed = ["Science"];
 let preferencesBlue = ["PopCulture"];
 let categories = ["Science", "PopCulture", "Sports"];
 
+// activeCategories - все загруженные по итогу категории (уникальное объединение preferencesRed и preferencesBlue
+let activeCategories = new Set([
+    ...preferencesRed,
+    ...preferencesBlue
+]);
+
 let questionBank = [];
 let id = -1; // на всякий случай
 for (let i = 0; i < categories.length; i++) {
