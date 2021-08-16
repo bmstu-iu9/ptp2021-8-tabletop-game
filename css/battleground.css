@@ -1,6 +1,7 @@
 body {
     background-color: #e5e5e5;
      /* мне приятней работать с этим цветом бэкграунда */
+     overflow: hidden;
   }
 
 
@@ -16,21 +17,31 @@ body {
     --third-left: 0;
     --fourth-left: -64%;
     --fifth-left: -130%;
-    --scope-size: 20px;
-    --blue-scope-left: -360px;
+    --scope-size: 22px;
+    --blue-scope-left: -300px;
     --blue-scope-top: 60px;
-    --red-scope-left: -360px;
+    --red-scope-left: -300px;
     --red-scope-top: 500px;
     --timer-size: 25px;
-    --timer-top: 300px;
-    --timer-left: 1110px;
+    --timer-top: 46%;
+    --timer-left: 75%;
+}
+@media (max-width: 1410px) {
+    :root {
+        --hex-side: 58px;
+    }
 }
 @media (max-width: 1340px) {
     :root {
         --hex-side: 55px;
         --blue-scope-left: -300px;
         --red-scope-left: -300px;
-        --timer-left: 900px;
+    }
+}
+@media (max-width: 1260px) {
+    :root {
+        --hex-side: 52px;
+        
     }
 }
 @media (max-width: 1200px) {
@@ -39,29 +50,35 @@ body {
         --retreat-height: 48px;
         --blue-scope-left: -250px;
         --red-scope-left: -250px;
-        --timer-left: 800px;
     }
 }
-
+@media (max-width: 1100px) {
+    :root {
+        --first-top: 57%;
+        --second-top: 30%;
+        --third-top: 20%;
+        --hex-side: 48px;
+        --retreat-height: 48px;
+        --blue-scope-left: -250px;
+        --red-scope-left: -250px;
+    }
+}
 @media (max-width: 1030px) {
     :root {
         --hex-side: 45px;
         --retreat-height: 40px;
         --blue-scope-left: -200px;
         --red-scope-left: -200px;
-        --timer-left: 700px;
     }
 }
 @media (max-width: 950px) {
     :root {
+
         --blue-scope-left: -150px;
         --red-scope-left: -150px;
         --hex-side: 40px;
         --retreat-height: 40px;
-        --first-top: 57%;
-        --second-top: 30%;
-        --third-top: 20%;
-        --timer-left: 650px;
+        
     }
 }
 @media (max-width: 870px) {
@@ -70,10 +87,9 @@ body {
         --red-scope-left: -100px;
         --hex-side: 35px;
         --retreat-height: 30px;
-        --first-top: 64%;
-        --second-top: 37%;
-        --third-top: 27%;
-        --timer-left: 600px;
+        --first-top: 71%;
+        --second-top: 44%;
+        --third-top: 35%;
     }
 }
 @media (max-width: 800px) {
@@ -82,26 +98,41 @@ body {
         --red-scope-left: -50px;
         --hex-side: 31px;
         --retreat-height: 30px;
-        --timer-left: 550px;
+        --first-top: 82%;
+        --second-top: 54%;
+        --third-top: 44%;
+    }
+}
+@media (max-width: 650px) {
+    :root {
+        --hex-side: 28px;
+        --first-top: 88%;
+        --second-top: 60%;
+        --third-top: 50%;
     }
 }
 @media (max-width: 575px) {
     :root {
-        --first-top: 300px;
-        --second-top: 225px;
-        --third-top: 200px;
-        --first-left: 110px;
-        --second-left: 75px;
-        --third-left: 40px;
-        --fourth-left: 5px;
-        --fifth-left: -30px;
-        --hex-side: 25px;
-        --retreat-height: 25px;
+        --first-top: 86%;
+        --second-top: 59%;
+        --third-top: 50%;
+        --first-left: 185%;
+        --second-left: 130%;
+        --third-left: 80%;
+        --fourth-left: 30%;
+        --fifth-left: -30%;
+        --hex-side: 31px;
+        --retreat-height: 30px;
         --scope-size: 18px;
         --blue-scope-left: -190px;
         --red-scope-left: -190px;
-        --timer-left: 200px;
-        --timer-top: 650px;
+        --timer-left: 48%;
+        --timer-top: 92%;
+    }
+}
+@media (max-width: 510px) {
+    :root {
+        --hex-side: 28px;
     }
 }
 .hexagon {
