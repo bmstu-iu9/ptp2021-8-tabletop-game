@@ -5,17 +5,16 @@
  */
 
 // как-то так это должно выглядеть где-то там на моменте запуска игры - в финальной версии выпилить надо бы
-let test = loadQuestionPacks();
+// преференсы для примера, по итогу это должно всё заполняться в начале игры на основе того, что выбрали игроки
+let preferencesRed = ["Science", "Sports"];
+let preferencesBlue = ["PopCulture", "Sports"];
+let categories = ["Science", "PopCulture", "Sports"];
+let test = loadQuestionPacks(preferencesRed, preferencesBlue, categories);
 let activeCategories = test.activeCategories;
 let questionBank = test.questionBank;
 test = null;
 
-function loadQuestionPacks() {
-// для примера, по итогу это должно всё заполняться в начале игры на основе того, что выбрали игроки
-    let preferencesRed = ["Science", "Sports"];
-    let preferencesBlue = ["PopCulture", "Sports"];
-    let categories = ["Science", "PopCulture", "Sports"];
-
+function loadQuestionPacks(preferencesRed, preferencesBlue, categories) {
 // activeCategories - все загруженные по итогу категории (уникальное объединение preferencesRed и preferencesBlue
     let activeCategories = new Set([
         ...preferencesRed,
