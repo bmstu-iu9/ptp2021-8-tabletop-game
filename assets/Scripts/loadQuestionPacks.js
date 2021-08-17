@@ -4,23 +4,33 @@
 Тут мы загружаем все необходимые категории вопросов в банк вопросов в начале игры
  */
 
+// как-то так это должно выглядеть где-то там на моменте запуска игры - в финальной версии выпилить надо бы
+let test = loadQuestionPacks();
+let activeCategories = test.activeCategories;
+let questionBank = test.questionBank;
+test = null;
+
+function loadQuestionPacks() {
 // для примера, по итогу это должно всё заполняться в начале игры на основе того, что выбрали игроки
-let preferencesRed = ["Science", "Sports"];
-let preferencesBlue = ["PopCulture", "Sports"];
-let categories = ["Science", "PopCulture", "Sports"];
+    let preferencesRed = ["Science", "Sports"];
+    let preferencesBlue = ["PopCulture", "Sports"];
+    let categories = ["Science", "PopCulture", "Sports"];
 
 // activeCategories - все загруженные по итогу категории (уникальное объединение preferencesRed и preferencesBlue
-let activeCategories = new Set([
-    ...preferencesRed,
-    ...preferencesBlue
-]);
+    let activeCategories = new Set([
+        ...preferencesRed,
+        ...preferencesBlue
+    ]);
 
-let questionBank = [];
-let id = -1; // на всякий случай
-for (let i = 0; i < categories.length; i++) {
-    if ((preferencesRed.includes(categories[i])) || (preferencesBlue.includes(categories[i]))) {
-        questionBank.push(getQuestionPack(categories[i]));
+    let questionBank = [];
+    for (let i = 0; i < categories.length; i++) {
+        if ((preferencesRed.includes(categories[i])) || (preferencesBlue.includes(categories[i]))) {
+            questionBank.push(getQuestionPack(categories[i]));
+        }
     }
+
+    // Возвращаем объект, в котором поля соответствуют переменным - банк вопросов и массив всех загруженных категорий
+    return {questionBank:questionBank, activeCategories:activeCategories};
 }
 
 /*
@@ -44,7 +54,6 @@ function getQuestionPack(catName) {
     let questions = fileContent.split(/\r?\n/);
     let questionPack = [];
     for (let i = 0; i < questions.length; i++) {
-        id++;
         questionPack.push(getQuestion(questions[i]));
     }
     return {
@@ -56,14 +65,13 @@ function getQuestionPack(catName) {
 function getQuestion(question) {
     let questionData = question.split("|");
     if (questionData.length < 4) {
-        console.log("Недостаточно данных в вопросе №" + id);
+        console.log("Недостаточно данных в вопросе");
         return -1;
     }
     let questionText = questionData[0];
     let rightAnswer = questionData[1];
     let wrongAnswers = questionData.slice(2, questionData.length);
     return {
-        id,
         questionText,
         rightAnswer,
         wrongAnswers
