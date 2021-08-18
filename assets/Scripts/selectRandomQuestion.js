@@ -16,16 +16,16 @@ defenceCategory имеет значение "any" если не указана �
 function selectRandomQuestion(mode, defenceCategory = "any") {
     if (defenceCategory === "any") {
         if (mode === "red") {
-            takeQuestion(preferencesRed[Math.floor(Math.random()*preferencesRed.length)], "red");
+            return takeQuestion("red", preferencesRed[Math.floor(Math.random()*preferencesRed.length)]);
         } else if (mode === "blue") {
-            takeQuestion(preferencesBlue[Math.floor(Math.random()*preferencesBlue.length)], "blue");
+            return takeQuestion("blue", preferencesBlue[Math.floor(Math.random()*preferencesBlue.length)]);
         }
     } else {
-        takeQuestion(defenceCategory, mode);
+        return takeQuestion(mode, defenceCategory);
     }
 }
 
-function takeQuestion(preferredCategory, mode) {
+function takeQuestion(mode, preferredCategory) {
     let questions;
     for (let i = 0; i < questionBank.length; i++) {
         if (questionBank[i].catName === preferredCategory) {
@@ -37,9 +37,9 @@ function takeQuestion(preferredCategory, mode) {
     // проверка на наличие не разыгранных вопросов
     if (questions.length < 1) {
         if (mode === "red") {
-            checkEmptyCategories("red")
+            return checkEmptyCategories("red");
         } else if (mode === "blue") {
-            checkEmptyCategories("blue")
+            return checkEmptyCategories("blue");
         }
     }
 
@@ -56,7 +56,7 @@ function checkEmptyCategories(mode) {
             for (let j = 0; j < questionBank.length; j++) {
                 if ((preferencesRed[i] === questionBank[j].catName) &&
                     (questionBank[j].questionPack.length > 0)) {
-                    takeQuestion(preferencesRed[i], mode);
+                    return takeQuestion(mode, preferencesRed[i]);
                 }
             }
         }
@@ -65,7 +65,7 @@ function checkEmptyCategories(mode) {
             for (let j = 0; j < questionBank.length; j++) {
                 if ((preferencesBlue[i] === questionBank[j].catName) &&
                     (questionBank[j].questionPack.length > 0)) {
-                    takeQuestion(preferencesBlue[i], mode);
+                    return takeQuestion(mode, preferencesBlue[i]);
                 }
             }
         }
@@ -82,7 +82,7 @@ function checkEmptyCategories(mode) {
             for (let j = 0; j < questionBank.length; j++) {
                 if ((preferencesBlue[i] === questionBank[j].catName) &&
                     (questionBank[j].questionPack.length > 0)) {
-                    takeQuestion(preferencesBlue[i], mode);
+                    return takeQuestion(mode, preferencesBlue[i]);
                 }
             }
         }
@@ -91,7 +91,7 @@ function checkEmptyCategories(mode) {
             for (let j = 0; j < questionBank.length; j++) {
                 if ((preferencesRed[i] === questionBank[j].catName) &&
                     (questionBank[j].questionPack.length > 0)) {
-                    takeQuestion(preferencesRed[i], mode);
+                    return takeQuestion(mode, preferencesRed[i]);
                 }
             }
         }
@@ -101,7 +101,7 @@ function checkEmptyCategories(mode) {
     Если уж код дошёл сюда, то доступных вопросов нет ни в одной избранной категории любого из
     игроков и всё плохо
      */
-    alert("вопросы кончились, всё плохо");
+    console.log("вопросы кончились, всё плохо");
 }
 
 function removeQuestionFromBank(questions, index) {
@@ -114,7 +114,6 @@ function fillQuestionForms(selectedQuestion) {
     let questionText = selectedQuestion.questionText;
     let wrongAnswers = selectedQuestion.wrongAnswers;
     wrongAnswers = shuffleWrongAnswers(wrongAnswers);
-    let id = selectedQuestion.id;
     switch (rightAnswerIndex) {
         case 0:
             A = selectedQuestion.rightAnswer;
@@ -142,7 +141,6 @@ function fillQuestionForms(selectedQuestion) {
             break;
     }
     return {
-        id,
         questionText,
         rightAnswerIndex,
         A,
