@@ -7,11 +7,8 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 
 
-app.get('/', (req, resp) => {
-    resp.sendFile(path.resolve('index.html'));
-});
 
-app.use(express.static(path.resolve('assets')))
+app.use(express.static(path.join(__dirname, 'public')));
 const users = {};
 io.on('connection', (socket) => {
     console.log('user connected');
