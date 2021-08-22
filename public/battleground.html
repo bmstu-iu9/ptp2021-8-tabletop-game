@@ -3,7 +3,7 @@
   <head>
     <!-- Обязательные метатеги -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -191,6 +191,41 @@
             1
           </div>
         </div>
-    </div>        
+    </div>  
+    
+    
+    <div class="question-container" id="question-container">
+      <div class="question row align-items-center" id="question">
+        <div class="text-center" id="question-text">
+          В какой популярной кинофраншизе используется фраза "Да пребудет с тобой сила"?
+        </div>  
+      </div>
+      <div class="answers row" id="answer">
+        <div class="col-6 A-B-questions">
+          <div class="A row align-items-center">
+            <div class="text-center A-txt" id="A-txt" onclick="alert(1)">
+              Звёздные войны
+            </div>
+          </div>
+          <div class="B row align-items-center">
+            <div class="text-center B-txt" id="B-txt" onclick="alert(2)">
+              Звёздный путь
+            </div>
+          </div>
+        </div>
+        <div class="col-6 C-D-questions">
+          <div class="C row align-items-center">
+            <div class="text-center C-txt" id="C-txt" onclick="alert(3)">
+              Невероятные приключения Джо-Джо
+            </div>
+          </div>
+          <div class="D row align-items-center">
+            <div class="text-center D-txt" id="D-txt" onclick="alert(4)">
+              Терминатор
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
   </body>
 </html>
