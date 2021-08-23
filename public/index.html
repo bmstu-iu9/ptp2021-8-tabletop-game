@@ -22,12 +22,7 @@
     />
     <title>Our main page</title>
     <style>
-      body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-
-      #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
-      #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
-      #input:focus { outline: none; }
-      #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
 
       #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages > li { padding: 0.5rem 1rem; }
@@ -83,12 +78,12 @@
 
     <!-- Corner buttons -->
     <!-- ??? -->
-    <button type="button" class="btn btn-corner position-absolute top-0 start-0" data-bs-toggle="modal" data-bs-target="#molitvy">
+    <button type="button" class="btn btn-corner position-absolute top-0 start-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
       <!--<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" class="bi bi-question-circle " viewBox="0 0 16 16">
         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
         <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
       </svg>-->
-      prayers
+      chat
     </button>
     <!-- Rules -->
     <button type="button" class="btn btn-corner position-absolute top-0 end-0" data-bs-toggle="modal" data-bs-target="#rules">
@@ -137,6 +132,47 @@
                   <li>Побеждает тот, кто захватил больше главных клеток соперника. Если оба игрока имеют одинаковое число таких захваченых клеток, тогда победа уходит тому, кто набрал больше очков по итогам игры. Иначе ничья.</li>
               </ol>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Molitvy -->
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header" style="background-color: #33449C !important;">
+          <h3 class="offcanvas-title text-white" id="offcanvasScrollingLabel">Chat!</h3>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul id="messages">
+            <li>asfasdaioshdakshdkjahskjdbakjsda daihskjdbaskjdba sdhasjdhak jsdha shdasgdjhgsadfhjasdfgausgdfadgfjhafsf</li>
+            <li>asfasf</li>
+            <li>asfasf</li>
+            <li>asfasdaioshdakshdkjahskjdbakjsda daihskjdbaskjdba sdhasjdhak jsdha shdasgdjhgsadfhjasdfgausgdfadgfjhafsf</li>
+            <li>asfasf</li>
+            <li>asfasf</li>
+            <li>asfasdaioshdakshdkjahskjdbakjsda daihskjdbaskjdba sdhasjdhak jsdha shdasgdjhgsadfhjasdfgausgdfadgfjhafsf</li>
+            <li>asfasf</li>
+            <li>asfasf</li>
+            <li>asfasdaioshdakshdkjahskjdbakjsda daihskjdbaskjdba sdhasjdhak jsdha shdasgdjhgsadfhjasdfgausgdfadgfjhafsf</li>
+            <li>asfasf</li>
+            <li>asfasf</li>
+            <li>asfasdaioshdakshdkjahskjdbakjsda daihskjdbaskjdba sdhasjdhak jsdha shdasgdjhgsadfhjasdfgausgdfadgfjhafsf</li>
+            <li>asfasf</li>
+            <li>asfasf</li>
+            <li>asfasdaioshdakshdkjahskjdbakjsda daihskjdbaskjdba sdhasjdhak jsdha shdasgdjhgsadfhjasdfgausgdfadgfjhafsf</li>
+            <li>asfasf</li>
+            <li>asfasf</li>
+          </ul>
+          <!--form id="form" action="">
+            <input id="input" autocomplete="off" /><button>Send</button>
+          </form-->
+          <div class="container-fluid">
+            <form id="form" action="" class="position-absolute bottom-0" style="">
+              <div class="input-group mb-3 w-100 start-0 end-0" id="from">            
+                  <input id="input" type="text" autocomplete="off" class="form-control " placeholder="Write a message">
+                  <button class="btn btn-primary" type="button" id="">Send</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -275,8 +311,6 @@
         </div>
       </div>
 
-      <!-- Molitvy -->
-
       <!-- Play -->
       <div class="modal fade" id="play" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -309,10 +343,6 @@
         </div>
       </div>
     </div>
-    <ul id="messages"></ul>
-    <form id="form" action="">
-      <input id="input" autocomplete="off" /><button>Send</button>
-    </form>
     <script src="/socket.io/socket.io.js"></script>
     <script src="./assets/Scripts/createUniqueId.js"></script>
     <script>
