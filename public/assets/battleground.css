@@ -38,10 +38,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
 body {
-    background-color: #e5e5e5;
+    /* background-color: #e5e5e5; */
+    background-color: #FFFFFF;
+    background: linear-gradient(to right, #FFFFFF 58%, #33449C 42%);
     overflow: hidden;
      /* мне приятней работать с этим цветом бэкграунда */
   }
+
+.btn-corner{
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
 
 
   :root{  
@@ -487,6 +493,7 @@ body {
     border: 3px solid black;
     background: cadetblue;
 }
+
 .question {
     font-size: var(--question-size);
     margin-left: 0.01%;
@@ -515,4 +522,13 @@ body {
 }
 .A-txt:hover, .B-txt:hover,  .C-txt:hover, .D-txt:hover{
     font-weight: bold;
+}
+
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
 }
