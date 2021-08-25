@@ -55,7 +55,7 @@
 
       <!-- Contact us -->
       <!-- Contacts -->
-      <button type="button" class="btn btn-corner position-absolute bottom-0 end-0" data-bs-toggle="modal" data-bs-target="#question-container">
+      <button type="button" class="btn btn-corner position-absolute bottom-0 end-0" data-bs-toggle="modal" data-bs-target="#contact">
         contacts
       </button>
       <div class="modal fade" id="contact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -220,7 +220,7 @@
     </div>  
     
     
-    <div class="question-container unselectable" id="question-container">
+    <!--div class="question-container unselectable" id="question-container">
       <div class="question row align-items-center" id="question">
         <div class="text-center unselectable" id="question-text">
           В какой популярной кинофраншизе используется фраза "Да пребудет с тобой сила"?
@@ -252,25 +252,58 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <!--div class="modal" tabindex="-1" id="question-container">
-      <div class="modal-dialog modal-lg h-75 overflow-hidden">
+    </div-->
+    <!-- Новый квестшн контейнер -->
+    <div class="modal overflow-hidden" tabindex="-1" id="question-container">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
-          <div class="modal-body min-vh-75">
+          <div class="modal-body">
             <div class="container-fluid">
-              <div class="row vh-100">
-                <div class="col-12">question</div>
-                <div class="col-6">a</div>
-                <div class="col-6">b</div>
-                <div class="col-6">c</div>
-                <div class="col-6">d</div>
+              <div class="row vh-100 text-center">
+                <div class="col-12" id="question">
+                  <div class="con">
+                    <div>
+                      <p class="unselectable fw-bold fs-2" id="question-text">В какой популярной кинофраншизе используется фраза "Да пребудет с тобой сила"?</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-6 bg-primary">
+                  <div class="con">
+                    <div class="btn">
+                      <p class="fs-3" id="A-txt" onclick="alert(1)">Звёздные войны</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 bg-success">
+                  <div class="con">
+                    <div class="btn">
+                      <p class="fs-3" id="B-txt" onclick="alert(2)">Звёздный путь</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 bg-danger">
+                  <div class="con">
+                    <div class="btn">
+                      <p class="fs-3" id="C-txt" onclick="alert(3)">Невероятные приключения Джо-Джо</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 bg-warning">
+                  <div class="con">
+                    <div class="btn">
+                      <p class="fs-3" id="D-txt" onclick="alert(4)">Терминатор</p>
+                    </div>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
       </div>
-    </div-->
+    </div>
+    <!-- Ego konec -->
 
   </body>
 </html>
