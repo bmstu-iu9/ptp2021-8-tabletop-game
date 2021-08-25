@@ -21,20 +21,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <!--Правила перекочевали из index.public-->
 
-    <button type="button" class="btn btn-dark position-absolute top-0 end-0" data-bs-toggle="modal" data-bs-target="#rules">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-          <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-        </svg>
-      </button>
+    <button type="button" class="btn btn-corner position-absolute top-0 end-0" data-bs-toggle="modal" data-bs-target="#rules">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+      </svg> -->
+      rules
+    </button>
       <div class="modal fade" id="rules" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
           <div class="modal-content">
-            <div class="modal-header">
-              <h3 class="modal-tite" id="exampleModalLabel">
+            <div class="modal-header" style="background-color: #33449C !important;">
+              <h3 class="modal-title text-white" id="rulesTextView">
               Rules!</h3>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="">
                <ol type="1">
                   <li>Два игрока подключаются на сайт и начинают свое пошаговое состязание, длящееся не более 10 минут. У каждого игрока есть 3 главных поля, которые нужно захватить сопернику, остальные поля изначально нейтральные.</li>
                   <li>Чтобы захватить какую-то конкретную зону, игроку необходимо правильно ответить на вопрос выбранного поля(вопросы на полях выбираются исходя из выбранных заранее категорий, выбираемых игроками) за определенный промежуток времени. Если игрок дал верный ответ, тогда он получает +очки, а поле переходит в его распоряжение и он может выбрать категорию, которую придется отвечать сопернику, если тот попытается перехватить эту зону в дальнейшем. За перехват зоны игрок получает количество очков, равное: стандарная сумма + ставка игрока * 2</li>
@@ -47,6 +48,29 @@
                   </li>
                   <li>Побеждает тот, кто захватил больше главных клеток соперника. Если оба игрока имеют одинаковое число таких захваченых клеток, тогда победа уходит тому, кто набрал больше очков по итогам игры. Иначе ничья.</li>
               </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact us -->
+      <!-- Contacts -->
+      <button type="button" class="btn btn-corner position-absolute bottom-0 end-0" data-bs-toggle="modal" data-bs-target="#question-container">
+        contacts
+      </button>
+      <div class="modal fade" id="contact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" style="">
+            <div class="modal-header" style="background-color: #33449C !important;">
+              <h3 class="modal-title text-white" id="contactTextView">Contact us!</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="">
+               <p>We're poor students, so if you want to support us you can conntact us and send us some money</p>
+               <p>To contacs us use links below</p>
+               <p><a href="https://github.com/bmstu-iu9/ptp2021-8-tabletop-game" class="link-info">Our github</a> |
+                <a href="https://vk.com/ceeeeeeeeeeeeeeeeeeeeeb" class="link-info">Our teamlead</a> |
+                <a href="https://vk.com/pur3vessel" class="link-info">Just otec</a></p>
             </div>
           </div>
         </div>
@@ -172,18 +196,20 @@
   
             </div>
           </div>
-          <div class="col">
-            <div class="scope">
-              <div class="blue-scope" id="blue-scope">
-              	
-              </div>
-              <div class="new-blue-scope" id="new-b">
+          <div class="col w-100">
+            <div class="w-100" style="background-color: background-color: #33449C !important;">
+              <div class="scope">
+                <div class="blue-scope" id="blue-scope">
+                	
+                </div>
+                <div class="new-blue-scope" id="new-b">
 
-              </div>
-              <div class="red-scope" id="red-scope">
-              	
-              </div>
-              <div class="new-red-scope" id="new-r">
+                </div>
+                <div class="red-scope" id="red-scope">
+                	
+                </div>
+                <div class="new-red-scope" id="new-r">
+                </div>
               </div>
             </div>
           </div>
@@ -194,9 +220,9 @@
     </div>  
     
     
-    <div class="question-container" id="question-container">
+    <div class="question-container unselectable" id="question-container">
       <div class="question row align-items-center" id="question">
-        <div class="text-center" id="question-text">
+        <div class="text-center unselectable" id="question-text">
           В какой популярной кинофраншизе используется фраза "Да пребудет с тобой сила"?
         </div>  
       </div>
@@ -226,6 +252,25 @@
           </div>
         </div>
       </div>
-    </div>    
+    </div>
+
+    <!--div class="modal" tabindex="-1" id="question-container">
+      <div class="modal-dialog modal-lg h-75 overflow-hidden">
+        <div class="modal-content">
+          <div class="modal-body min-vh-75">
+            <div class="container-fluid">
+              <div class="row vh-100">
+                <div class="col-12">question</div>
+                <div class="col-6">a</div>
+                <div class="col-6">b</div>
+                <div class="col-6">c</div>
+                <div class="col-6">d</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div-->
+
   </body>
 </html>
