@@ -22,6 +22,9 @@ function activeCategoriesToString(activeCategories) {
             case "Sports":
                 output += "-Спорт\n";
                 break;
+            case "Memes":
+                output += "-Мемы\n";
+                break;
         }
     }
     return output;
