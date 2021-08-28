@@ -532,3 +532,15 @@ body {
   -ms-user-select: none;       /* Internet Explorer/Edge */
   user-select: none;
 }
+
+.con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.con p {
+    width: 400px;
+    padding: 15px;
+}
