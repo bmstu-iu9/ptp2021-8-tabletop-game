@@ -4,11 +4,10 @@
 Тут мы загружаем все необходимые категории вопросов в банк вопросов в начале игры
  */
 
-// как-то так это должно выглядеть где-то там на моменте запуска игры - в финальной версии выпилить надо бы
 // преференсы для примера, по итогу это должно всё заполняться в начале игры на основе того, что выбрали игроки
-let preferencesRed = ["Science", "Sports", "Memes"];
-let preferencesBlue = ["PopCulture", "Sports"];
-let categories = ["Science", "PopCulture", "Sports", "Memes"];
+let preferencesRed = ["Science", "Sports", "Memes", "Games"];
+let preferencesBlue = ["Variety", "Movies", "Music", "Literature"];
+let categories = ["Games", "Literature", "Memes", "Movies", "Music", "Science", "Sports", "Variety"];
 let test = loadQuestionPacks(preferencesRed, preferencesBlue, categories);
 let activeCategories = test.activeCategories;
 let questionBank = test.questionBank;
