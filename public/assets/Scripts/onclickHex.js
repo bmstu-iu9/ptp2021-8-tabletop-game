@@ -3,6 +3,10 @@ function onclickHex(hexId) {
         currentHex = hexId
         Turn(10)
         const questionContainer = document.getElementById('question-container')
+        if (questionContainer === undefined) {
+            alert('В базе данных закончились вопросы')
+            return
+        }
         let mode
         if (hexagons[hexId - 1].color === 'neutral') {
             mode = currentPlayer
