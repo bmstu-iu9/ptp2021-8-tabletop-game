@@ -1,5 +1,5 @@
 {
-  "name": "testPtp",
+  "name": "testptp",
   "version": "1.0.0",
   "description": "- Панов Севастьян(капитан) - <a href=https://github.com/nOmeep>nOmeep</a> - Баев Данил - <a href=https://github.com/Pur3Vessel>Pur3Vessel</a> - Матвеев Евгений - <a href=https://github.com/theElusiveJoe>theElusiveJoe</a> - Федоров Александр - <a href=https://github.com/JazZzik>JazZzik</a> - Куценков Максим - <a href=https://github.com/megamax625>megamax625</a> - Петросян Алексей - <a href=https://github.com/AlexPetrosyan>AlexPetrosyan</a> - Шишкин Иван - <a href=https://github.com/ivanfotbin>ivanfotbin</a> - Проскурников Юрий - <a href=https://github.com/Qmask26>Qmask26</a>",
   "main": "index.js",
@@ -17,5 +17,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmstu-iu9/ptp2021-8-tabletop-game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bmstu-iu9/ptp2021-8-tabletop-game/issues"
+  },
+  "homepage": "https://github.com/bmstu-iu9/ptp2021-8-tabletop-game#readme"
 }
