@@ -21,14 +21,26 @@ function activeCategoriesToString(activeCategories) {
             case "Science":
                 output += "-Наука\n";
                 break;
-            case "PopCulture":
-                output += "-Поп-культура\n";
+            case "Variety":
+                output += "-Разное\n";
                 break;
             case "Sports":
                 output += "-Спорт\n";
                 break;
             case "Memes":
                 output += "-Мемы\n";
+                break;
+            case "Games":
+                output += "-Игры\n";
+                break;
+            case "Music":
+                output += "-Музыка\n";
+                break;
+            case "Movies":
+                output += "-Кино\n";
+                break;
+            case "Literature":
+                output += "-Литература\n";
                 break;
         }
     });
