@@ -55,7 +55,7 @@
 
       <!-- Contact us -->
       <!-- Contacts -->
-      <button type="button" class="btn btn-corner position-absolute bottom-0 end-0" data-bs-toggle="modal" data-bs-target="#contact">
+      <button type="button" class="btn btn-corner position-absolute bottom-0 end-0" data-bs-toggle="modal" data-bs-target="#question-container">
         contacts
       </button>
       <div class="modal fade" id="contact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -213,8 +213,14 @@
               </div>
             </div>
           </div>
-          <div class="timer" id="timer">
-            1
+          <div class="game-info text-center">
+            <p>Ходов осталось</p>
+            <p><span class="text-danger">10&nbsp</span>   <span class="text-primary">10</span></p>
+            <br>
+            <p>Ход <span class="text-danger">красного</span></p>
+            <br>
+            <p>Корон</p>
+            <p><span class="text-danger">0&nbsp</span>  <span class="text-primary">0</span></p>
           </div>
         </div>
     </div>  
@@ -270,29 +276,29 @@
                 
                 <div class="col-6 bg-primary">
                   <div class="con">
-                    <div class="btn">
+                    <div class="btn ans">
                       <p class="fs-3" id="A-txt" onclick="alert(1)">Звёздные войны</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-6 bg-success">
                   <div class="con">
-                    <div class="btn">
+                    <div class="btn ans">
                       <p class="fs-3" id="B-txt" onclick="alert(2)">Звёздный путь</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-6 bg-danger">
                   <div class="con">
-                    <div class="btn">
+                    <div class="btn ans">
                       <p class="fs-3" id="C-txt" onclick="alert(3)">Невероятные приключения Джо-Джо</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-6 bg-warning">
                   <div class="con">
-                    <div class="btn">
-                      <p class="fs-3" id="D-txt" onclick="alert(4)">Терминатор</p>
+                    <div class="btn ans">
+                     <p class="fs-3" id="D-txt" onclick="alert(4)">Терминатор</p>
                     </div>
                   </div>
                 </div>
