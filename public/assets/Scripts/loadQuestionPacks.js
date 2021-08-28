@@ -6,9 +6,9 @@
 
 // как-то так это должно выглядеть где-то там на моменте запуска игры - в финальной версии выпилить надо бы
 // преференсы для примера, по итогу это должно всё заполняться в начале игры на основе того, что выбрали игроки
-let preferencesRed = ["Science", "Sports"];
+let preferencesRed = ["Science", "Sports", "Memes"];
 let preferencesBlue = ["PopCulture", "Sports"];
-let categories = ["Science", "PopCulture", "Sports"];
+let categories = ["Science", "PopCulture", "Sports", "Memes"];
 let test = loadQuestionPacks(preferencesRed, preferencesBlue, categories);
 let activeCategories = test.activeCategories;
 let questionBank = test.questionBank;
@@ -47,13 +47,29 @@ function loadQuestionPacks(preferencesRed, preferencesBlue, categories) {
  */
 
 function getQuestionPack(catName) {
-    const fs = require("fs");
-    let fileContent = fs.readFileSync("../question" +
-        "Packs/" + catName + ".txt", "utf8");
+    // выполняем XMLHttpRequest для получения файла и обрабатываем его
+    let requestURL = "assets/questionPacks/" + catName + ".txt";
+    let request = new XMLHttpRequest();
+
+    request.open("GET", requestURL, false);
+
+    request.send();
+
+    request.onload = function() {
+        if ((request.status !== 200) && (request.status !== 4)) { // анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
+            alert(`Ошибка ${request.status}: ${request.statusText}`);
+        }
+    };
+
+    request.onerror = function() {
+        alert("Запрос не удался");
+    };
+
+    let fileContent = request.responseText;
     let questions = fileContent.split(/\r?\n/);
     let questionPack = [];
     for (let i = 0; i < questions.length; i++) {
-        questionPack.push(getQuestion(questions[i]));
+        questionPack.push(getQuestion(questions[i], catName));
     }
     return {
         catName,
@@ -61,10 +77,10 @@ function getQuestionPack(catName) {
     };
 }
 
-function getQuestion(question) {
+function getQuestion(question, catName) {
     let questionData = question.split("|");
     if (questionData.length < 4) {
-        console.log("Недостаточно данных в вопросе");
+        console.log("Недостаточно данных в вопросе в категории " + catName);
         return -1;
     }
     let questionText = questionData[0];
