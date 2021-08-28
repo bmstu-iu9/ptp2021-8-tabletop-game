@@ -68,8 +68,8 @@ body {
     --red-scope-left: -300px;
     --red-scope-top: 580px;
     --timer-size: 25px;
-    --timer-top: -270px;
-    --timer-left: 75%;
+    --timer-top: -48vh;
+    --timer-left: 30%;
     --question-size: 2.5em;
     --answer-size: 1.5em;
 }
@@ -101,7 +101,7 @@ body {
         --red-scope-left: -250px;
         --question-size: 2.2em;
         --answer-size: 1.3em;
-        --timer-top: -210px;
+        --timer-top: -40vh;
     }
 }
 @media (max-width: 1100px) {
@@ -115,7 +115,6 @@ body {
         --retreat-height: 48px;
         --blue-scope-left: -250px;
         --red-scope-left: -250px;
-        --timer-top: -190px;
     }
 }
 @media (max-width: 1030px) {
@@ -125,7 +124,8 @@ body {
         --retreat-height: 40px;
         --blue-scope-left: -200px;
         --red-scope-left: -200px;
-        --timer-top: -150px;
+        --timer-size: 20px;
+        --timer-top: -30vh;
     }
 }
 @media (max-width: 950px) {
@@ -135,7 +135,6 @@ body {
         --red-scope-left: -150px;
         --hex-side: 40px;
         --retreat-height: 40px;
-        --timer-top: -120px;
     }
 }
 @media (max-width: 870px) {
@@ -149,7 +148,7 @@ body {
         --first-top: 71%;
         --second-top: 44%;
         --third-top: 35%;
-        --timer-top: -30px;
+        --timer-top: -15vh;
     }
 }
 @media (max-width: 800px) {
@@ -163,6 +162,7 @@ body {
         --first-top: 82%;
         --second-top: 54%;
         --third-top: 44%;
+        --timer-top: -12vh;
     }
 }
 @media (max-width: 650px) {
@@ -173,7 +173,6 @@ body {
         --third-top: 50%;
         --question-size: 1.6em;
         --answer-size: 1.16em;
-        --timer-top: 0;
         --timer-size: 22px;
         --red-scope-top: 500px;
     }
@@ -183,28 +182,34 @@ body {
         --first-top: 86%;
         --second-top: 59%;
         --third-top: 50%;
-        --first-left: 185%;
-        --second-left: 130%;
-        --third-left: 80%;
-        --fourth-left: 30%;
-        --fifth-left: -30%;
+        --first-left: 35%;
+        --second-left: -20%;
+        --third-left: -70%;
+        --fourth-left: -120%;
+        --fifth-left: -180%;
         --hex-side: 31px;
         --retreat-height: 30px;
         --scope-size: 18px;
-        --blue-scope-left: -190px;
-        --red-scope-left: -190px;
+        --blue-scope-left: -100px;
+        --red-scope-left: -100px;
         --blue-scope-top: 65px;
         --red-scope-top: 540px;
-        --timer-left: 48%;
-        --timer-top: 365px;
+        --timer-left: 30%;
+        --timer-top: -10vh;
+        --timer-size: 17px;
         --question-size: 1.5em;
         --answer-size: 1.10em;
     }
 }
 @media (max-width: 510px) {
     :root {
-        --blue-scope-left: -165px;
-        --red-scope-left: -165px;
+        --first-left: 25%;
+        --second-left: -30%;
+        --third-left: -80%;
+        --fourth-left: -130%;
+        --fifth-left: -190%;
+        --blue-scope-left: -110px;
+        --red-scope-left: -110px;
         --hex-side: 28px;
         --answer-size: 1em;
     }
@@ -217,7 +222,6 @@ body {
         --scope-size: 18px;
         --blue-scope-top: 65px;
         --red-scope-top: 540px;
-        --timer-top: 330px;
     }
 }
 @media (max-width: 575px) and (max-height: 680px){
@@ -228,7 +232,6 @@ body {
         --scope-size: 18px;
         --blue-scope-top: 45px;
         --red-scope-top: 480px;
-        --timer-top: 280px;
     }
 }
 @media (max-width: 575px) and (max-height: 620px){
@@ -239,9 +242,9 @@ body {
         --scope-size: 18px;
         --blue-scope-top: 35px;
         --red-scope-top: 400px;
-        --timer-top: 220px;
         --hex-side:26px;
         --retreat-height: 26px;
+        --timer-top: -20vh;
     }
 }
 @media (max-width: 575px) and (max-height: 530px){
@@ -252,14 +255,14 @@ body {
         --scope-size: 18px;
         --blue-scope-top: 40px;
         --red-scope-top: 350px;
-        --timer-top: 240px;
         --hex-side:20px;
         --retreat-height: 20px;
-        --first-left: 215%;
-        --second-left: 150%;
-        --third-left: 80%;
-        --fourth-left: 15%;
-        --fifth-left: -55%;
+        --timer-top: -20vh;
+        --first-left: 60%;
+        --second-left: -10%;
+        --third-left: -80%;
+        --fourth-left: -150%;
+        --fifth-left: -220%;
     }
 }
 .hexagon {
@@ -434,11 +437,7 @@ body {
     left: var(--fifth-left);
     top:  var(--first-top);
 }
-.timer-move {
-    position: absolute;
-    right: 12%;
-    top: 40% 
-}
+
 .text-move {
     position: relative;
     right: 38%;
@@ -474,11 +473,10 @@ body {
     left: var(--red-scope-left);
     top: var(--red-scope-top);
 }
-.timer {
+.game-info {
     font-weight: bold;
     font-size: var(--timer-size);
     position: relative;
-    z-index: 0;
     left: var(--timer-left);
     top: var(--timer-top);
 }
@@ -543,4 +541,9 @@ body {
 .con p {
     width: 400px;
     padding: 15px;
+}
+.ans {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
