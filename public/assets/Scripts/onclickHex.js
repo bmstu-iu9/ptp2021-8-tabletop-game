@@ -3,7 +3,7 @@ function onclickHex(hexId) {
         currentHex = hexId
         Turn(10)
         const questionContainer = document.getElementById('question-container')
-        let mode = ''
+        let mode
         if (hexagons[hexId - 1].color === 'neutral') {
             mode = currentPlayer
         } else {
