@@ -31,8 +31,8 @@ let questionMode,
     currentPlayer = 'red',
     redScore = 0,
     blueScore = 0,
-    redMoves = 1,
-    blueMoves = 1,
+    redMoves = 10,
+    blueMoves = 10,
     hexagons = [];
 
 const questionContainer = document.getElementById('question-container');
