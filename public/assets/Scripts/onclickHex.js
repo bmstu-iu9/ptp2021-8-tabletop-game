@@ -18,6 +18,10 @@ function fillTheContainer() {
         questionMode = hexagons[currentHex - 1].color
     }
     currentQuestion = selectRandomQuestion(questionMode)
+    if (currentQuestion === undefined) {
+        alert("В базе закончились вопросы!")
+        gameOver()
+    }
     document.getElementById('question-text').innerHTML = currentQuestion.questionText
     document.getElementById('A-txt').innerHTML = currentQuestion.A
     document.getElementById('B-txt').innerHTML = currentQuestion.B

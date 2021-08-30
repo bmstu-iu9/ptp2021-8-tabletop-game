@@ -33,6 +33,9 @@ function onclickAnswer(answer) {
             redScore += 5
         }
         alert('WRONG!')
+        if (duelMode) {
+            minusMoves()
+        }
         duelMode = false
         duelScore = 0
         update()
@@ -46,17 +49,6 @@ function update() {
     timerZeroing()
     questionContainer.style.display = 'none'
     if (!gameState) {
-        if (redCrowns === 0) {
-            alert('синий победил!')
-        } else if (blueCrowns === 0) {
-            alert('красный победил!')
-        } else if (redScore > blueScore) {
-            alert('красный победил!')
-        } else if (blueScore > redScore) {
-            alert('синий победил!')
-        } else {
-            alert('ничья!')
-        }
-        document.location.href = "./index.html"
+        gameOver()
     }
 }

@@ -130,4 +130,19 @@ function minusMoves() {
     }
 }
 
+function gameOver() {
+    if (redCrowns === 0) {
+        alert('синий победил!')
+    } else if (blueCrowns === 0) {
+        alert('красный победил!')
+    } else if (redScore > blueScore) {
+        alert('красный победил!')
+    } else if (blueScore > redScore) {
+        alert('синий победил!')
+    } else {
+        alert('ничья!')
+    }
+    document.location.href = "./index.html"
+}
+
 hexInit()
