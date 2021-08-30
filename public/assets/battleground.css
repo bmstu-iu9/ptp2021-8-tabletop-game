@@ -54,9 +54,9 @@ body {
     --hex-side: 60px;
     --retreat-height: 53px;
     --hex-rotate: 30deg; /* угол наклона шестиугольника относительно центра */
-    --first-top: 46%;
-    --second-top: 19%;
-    --third-top: 10%;
+    --first-top: 41%;
+    --second-top: 14%;
+    --third-top: 5%;
     --first-left: 130%;
     --second-left: 64%;
     --third-left: 0;
@@ -379,7 +379,7 @@ body {
 }
 .retreat {
     background-color: transparent;
-    width: 1px;
+    width: 0.0001px;
     height: var(--retreat-height);
 }
 
@@ -477,6 +477,7 @@ body {
     font-weight: bold;
     font-size: var(--timer-size);
     position: relative;
+    z-index: -2;
     left: var(--timer-left);
     top: var(--timer-top);
 }
@@ -547,3 +548,4 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
