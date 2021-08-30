@@ -20,7 +20,10 @@ class Hexagon {
     }
 }
 
-let redCrowns = 3,
+let questionMode,
+    duelScore = 0,
+    duelMode = false,
+    redCrowns = 3,
     blueCrowns = 3,
     gameState = true,
     currentQuestion,
@@ -28,9 +31,11 @@ let redCrowns = 3,
     currentPlayer = 'red',
     redScore = 0,
     blueScore = 0,
-    redMoves = 10,
-    blueMoves = 10,
+    redMoves = 1,
+    blueMoves = 1,
     hexagons = [];
+
+const questionContainer = document.getElementById('question-container');
 
 function hexInit() {
     hexagons[0] = new Hexagon(1, 2, 4)
@@ -74,10 +79,10 @@ function hexInit() {
 function changePlayer() {
     if (currentPlayer === 'red') {
         currentPlayer = 'blue'
-        document.getElementById('turn').innerHTML = 'Ход синего'
+        document.getElementById('turn').innerHTML = 'синего'
     } else {
         currentPlayer = 'red'
-        document.getElementById('turn').innerHTML = 'Ход красного'
+        document.getElementById('turn').innerHTML = 'красного'
     }
 }
 
@@ -90,10 +95,13 @@ function addScores(scores) {
 }
 
 function minusCrown() {
+    duelMode = false
     if (currentPlayer === 'red') {
         blueCrowns--
+        document.getElementById('red-crowns').innerHTML = 3 - blueCrowns
     } else {
         redCrowns--
+        document.getElementById('blue-crowns').innerHTML = 3 - redCrowns
     }
     if (blueCrowns === 0 || redCrowns === 0) {
         gameState = false
@@ -105,12 +113,14 @@ function minusMoves() {
     if (currentPlayer === 'red') {
         if (redMoves > 0) {
             redMoves--
+            document.getElementById('red-turn-remain').innerHTML = redMoves
         } else {
             alert('У красного нет ходов!')
         }
     } else {
         if (blueMoves > 0) {
             blueMoves--
+            document.getElementById('blue-turn-remain').innerHTML = blueMoves
         } else {
             alert('У синего нет ходов!')
         }
@@ -118,12 +128,6 @@ function minusMoves() {
     if (redMoves === 0 && blueMoves === 0) {
         gameState = false
     }
-    console.log(redMoves)
-    console.log(blueMoves)
 }
 
-function initGame() {
-    hexInit()
-}
-
-initGame()
+hexInit()
