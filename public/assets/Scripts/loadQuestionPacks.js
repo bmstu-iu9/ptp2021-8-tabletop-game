@@ -3,15 +3,34 @@
 и массив categories, содержащий строковые названия всех доступных категорий
 Тут мы загружаем все необходимые категории вопросов в банк вопросов в начале игры
  */
-
-// преференсы для примера, по итогу это должно всё заполняться в начале игры на основе того, что выбрали игроки
-let preferencesRed = ["Science", "Sports", "Memes", "Games"];
-let preferencesBlue = ["Variety", "Movies", "Music", "Literature"];
+let preferencesRed = [];
+let preferencesBlue = [];
 let categories = ["Games", "Literature", "Memes", "Movies", "Music", "Science", "Sports", "Variety"];
-let test = loadQuestionPacks(preferencesRed, preferencesBlue, categories);
-let activeCategories = test.activeCategories;
-let questionBank = test.questionBank;
-test = null;
+let test;
+let activeCategories;
+let questionBank;
+
+function addPreferences() {
+    let tmp
+
+    for (let i = 0; i < 4; i++) {
+        tmp = document.getElementById('player1-select' + (i + 1))
+        preferencesRed[i] = categoryNameToSystemName(tmp.options[tmp.selectedIndex].text)
+    }
+
+    for (let i = 0; i < 4; i++) {
+        tmp = document.getElementById('player2-select' + (i + 1))
+        preferencesBlue[i] = categoryNameToSystemName(tmp.options[tmp.selectedIndex].text)
+    }
+    preferencesRed = preferencesRed.reduce((unique, item) => unique.includes(item) ? unique : [... unique, item], [])
+    preferencesBlue = preferencesBlue.reduce((unique, item) => unique.includes(item) ? unique : [... unique, item], [])
+    test = loadQuestionPacks(preferencesRed, preferencesBlue, categories)
+    activeCategories = test.activeCategories
+    questionBank = test.questionBank
+    test = null
+    console.log(preferencesRed)
+    console.log(preferencesBlue)
+}
 
 function loadQuestionPacks(preferencesRed, preferencesBlue, categories) {
 // activeCategories - все загруженные по итогу категории (уникальное объединение preferencesRed и preferencesBlue
