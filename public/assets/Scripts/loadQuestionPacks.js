@@ -3,8 +3,6 @@
 и массив categories, содержащий строковые названия всех доступных категорий
 Тут мы загружаем все необходимые категории вопросов в банк вопросов в начале игры
  */
-
-// преференсы для примера, по итогу это должно всё заполняться в начале игры на основе того, что выбрали игроки
 let preferencesRed = [];
 let preferencesBlue = [];
 let categories = ["Games", "Literature", "Memes", "Movies", "Music", "Science", "Sports", "Variety"];
@@ -24,7 +22,8 @@ function addPreferences() {
         tmp = document.getElementById('player2-select' + (i + 1))
         preferencesBlue[i] = categoryNameToSystemName(tmp.options[tmp.selectedIndex].text)
     }
-
+    preferencesRed = preferencesRed.reduce((unique, item) => unique.includes(item) ? unique : [... unique, item], [])
+    preferencesBlue = preferencesBlue.reduce((unique, item) => unique.includes(item) ? unique : [... unique, item], [])
     test = loadQuestionPacks(preferencesRed, preferencesBlue, categories)
     activeCategories = test.activeCategories
     questionBank = test.questionBank
@@ -111,5 +110,3 @@ function getQuestion(question, catName) {
         wrongAnswers
     };
 }
-
-//addPreferences()
