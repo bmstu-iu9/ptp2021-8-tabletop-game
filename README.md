@@ -4,7 +4,7 @@
 - Баев Данил - <a href=https://github.com/Pur3Vessel>Pur3Vessel</a>
 - Федоров Александр - <a href=https://github.com/JazZzik>JazZzik</a>
 - Куценков Максим - <a href=https://github.com/megamax625>megamax625</a>
-- Петросян Алексей **(<u>считается павшим</u>)** - <a href=https://github.com/AlexPetrosyan>AlexPetrosyan</a>
+- Петросян Алексей **(<u>пропал без вести</u>)** - <a href=https://github.com/AlexPetrosyan>AlexPetrosyan</a>
 - Шишкин Иван - <a href=https://github.com/ivanfotbin>ivanfotbin</a>
 - Проскурников Юрий - <a href=https://github.com/Qmask26>Qmask26</a>
 
