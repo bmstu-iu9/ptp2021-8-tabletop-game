@@ -46,7 +46,6 @@ function update() {
     document.getElementById('red-scope').innerHTML = redScore
     document.getElementById('blue-scope').innerHTML = blueScore
     changePlayer()
-    timerZeroing()
     questionContainer.style.display = 'none'
     if (!gameState) {
         gameOver()

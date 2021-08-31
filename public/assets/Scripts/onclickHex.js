@@ -28,5 +28,4 @@ function fillTheContainer() {
     document.getElementById('C-txt').innerHTML = currentQuestion.C
     document.getElementById('D-txt').innerHTML = currentQuestion.D
     questionContainer.style.display = 'block'
-    Turn(10)
 }
