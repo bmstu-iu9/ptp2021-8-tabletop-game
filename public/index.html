@@ -357,9 +357,12 @@
               <div class="container-fluid">
                 <div class="col-12 align-self-center">
                   <div class="row justify-content-center">
-                    <div class="col-md-6 col-sm-6">
-                        <button class="btn btn-primary btn-lg w-100" data-bs-target="#topics-main" data-bs-toggle="modal" data-bs-dismiss="modal">Hotseat </button>
-                    </div>
+                      <div class="col-md-6 col-sm-6">
+                        <form action="battleground.html">
+                          <button class="btn btn-primary btn-lg w-100" tabindex="-1">Hotseat </button>
+                        </form>
+                      </div>
+
                     <div class="col-md-6 col-sm-6">
                       <a href="#" class="btn btn-primary btn-lg w-100 disabled" tabindex="-1" role="button" aria-disabled="true">Online</a>
                     </div>
@@ -374,15 +377,9 @@
     </div>
 
     <!-- Choose topics-main -->
-      <div class="modal fade" id="topics-main" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!--div class="modal fade" id="topics-main" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
           <div class="modal-content">
-          <!--
-            <div class="modal-header">
-              <h3 class="modal-title" id="exampleModalLabel">Choose topics you are good at!</h3>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-          -->
             <div class="modal-body" style="background-color: #33449C;">
               
               <div class="container-fluid">
@@ -519,7 +516,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div -->
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="./assets/Scripts/createUniqueId.js"></script>
