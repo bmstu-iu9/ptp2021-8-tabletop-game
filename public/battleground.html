@@ -12,6 +12,12 @@
     <title>battleground</title>
     <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script defer src="./assets/Scripts/game.js"></script>
+
+    <script type="text/javascript">
+        $(window).on('load',function(){
+            $('topics-main').modal('show');
+        });
+    </script>
   </head>
   <body>
      <!-- Bootstrap JS -->
@@ -310,7 +316,146 @@
       </div>
     </div>
      <!-- Ego konec -->
-    
+
+     <div class="modal fade" id="topics-main">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-body" style="background-color: #33449C;">
+              
+              <div class="container-fluid">
+                <div class="row vh-100">
+                  <div class="col-12 align-self-center">
+                    <div class="row justify-content-center">
+                      <div class="text-center text-white">
+                        <h1>Choose your DESTINY!</h1>
+                        <h3>Choose topics from our list</h3>
+                      </div>
+
+                      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 p-3">
+                        <div class="text-danger text-center mb-3">
+                          <h5>Player 1 topics</h5>
+                        </div>
+                        <div class="input-group mb-2">
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Игры</option>
+                            <option value="1">Литература</option>
+                            <option value="2">Мемы</option>
+                            <option value="3">Кино</option>
+                            <option value="4">Музыка</option>
+                            <option value="5">Наука</option>
+                            <option value="6">Спорт</option>
+                            <option value="7">Разное</option>
+                          </select>
+                        </div>
+                        <div class="input-group mb-2">
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Игры</option>
+                            <option value="1">Литература</option>
+                            <option value="2">Мемы</option>
+                            <option value="3">Кино</option>
+                            <option value="4">Музыка</option>
+                            <option value="5">Наука</option>
+                            <option value="6">Спорт</option>
+                            <option value="7">Разное</option>
+                          </select>
+                        </div>
+                        <div class="input-group mb-2">
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Игры</option>
+                            <option value="1">Литература</option>
+                            <option value="2">Мемы</option>
+                            <option value="3">Кино</option>
+                            <option value="4">Музыка</option>
+                            <option value="5">Наука</option>
+                            <option value="6">Спорт</option>
+                            <option value="7">Разное</option>
+                          </select>
+                        </div>
+                        <div class="input-group mb-2">
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Игры</option>
+                            <option value="1">Литература</option>
+                            <option value="2">Мемы</option>
+                            <option value="3">Кино</option>
+                            <option value="4">Музыка</option>
+                            <option value="5">Наука</option>
+                            <option value="6">Спорт</option>
+                            <option value="7">Разное</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 p-3">
+                        <div class="text-primary text-center mb-3">
+                          <h5>Player 2 topics</h5>
+                        </div>
+                        <div class="input-group mb-2">
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Игры</option>
+                            <option value="1">Литература</option>
+                            <option value="2">Мемы</option>
+                            <option value="3">Кино</option>
+                            <option value="4">Музыка</option>
+                            <option value="5">Наука</option>
+                            <option value="6">Спорт</option>
+                            <option value="7">Разное</option>
+                          </select>
+                        </div>
+                        <div class="input-group mb-2">
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Игры</option>
+                            <option value="1">Литература</option>
+                            <option value="2">Мемы</option>
+                            <option value="3">Кино</option>
+                            <option value="4">Музыка</option>
+                            <option value="5">Наука</option>
+                            <option value="6">Спорт</option>
+                            <option value="7">Разное</option>
+                          </select>
+                        </div>
+                        <div class="input-group mb-2">
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Игры</option>
+                            <option value="1">Литература</option>
+                            <option value="2">Мемы</option>
+                            <option value="3">Кино</option>
+                            <option value="4">Музыка</option>
+                            <option value="5">Наука</option>
+                            <option value="6">Спорт</option>
+                            <option value="7">Разное</option>
+                          </select>
+                        </div>
+                        <div class="input-group mb-2">
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Игры</option>
+                            <option value="1">Литература</option>
+                            <option value="2">Мемы</option>
+                            <option value="3">Кино</option>
+                            <option value="4">Музыка</option>
+                            <option value="5">Наука</option>
+                            <option value="6">Спорт</option>
+                            <option value="7">Разное</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div></div>
+                      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 p-3">
+                          <button class="btn btn-light w-100" data-bs-dismiss="modal" tabindex="-1">Play!</button>
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                  <div class="col-12"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
     <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
     <!--script src="./assets/Scripts/scope.js"></script-->
     <script src="./assets/Scripts/timer.js"></script>
@@ -320,5 +465,6 @@
     <script src="./assets/Scripts/onclickAnswer.js"></script>
     <script src="./assets/Scripts/onclickHex.js"></script>
     <script src="./assets/Scripts/initGame.js"></script>
+    <script src="./assets/Scripts/modal.js"></script>
   </body>
 </html>
