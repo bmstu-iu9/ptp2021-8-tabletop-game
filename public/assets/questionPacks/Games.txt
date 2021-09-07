@@ -2,3 +2,4 @@
 Какой из перечисленных героев в доте имеет сигнатурное комбо "ZXC"?|Shadow Fiend|Pudge|Invoker|Illidan Stormrage|Sub-Zero
 Какой персонаж в Dota 2 может насадить тебя на свой крюк?|Pudge|Invoker|Clockwerk|Kunkka|Aboba
 Какой предмет есть в дота олстарс?|буриза|бебра|брюква|лефрут
+Страна С необновленным деревом фокусов в HOI4|Soviet Union|Germany|France|Italy
