@@ -1,4 +1,4 @@
-# ptp2021-8-tabletop-game
+# Свой Тривиадор
 ### <u>**Состав команды**</u>
 - Панов Севастьян(капитан) - <a href=https://github.com/nOmeep>nOmeep</a>
 - Баев Данил - <a href=https://github.com/Pur3Vessel>Pur3Vessel</a>
